@@ -1,14 +1,204 @@
-<html lang="eng">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=devide-width, initial-scale=1.0">
-        <title> Document</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <h1>HeI</h1>
-        <p>Texto Texto TextoT</p>
-        <p>Texto Texto Texto</p>
-        <p>Texto Texto Texto</p>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High energy intelligence (HeI) Collaboration</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #34495e;
+            --text-color: #333;
+            --bg-color: #ecf0f1;
+            --accent-color: #3498db;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background: var(--bg-color);
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        header {
+            background: var(--primary-color);
+            color: #fff;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            margin-left: 1.5rem;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: var(--accent-color);
+        }
+        main {
+            margin-top: 60px;
+            padding: 2rem 0;
+        }
+        section {
+            margin-bottom: 4rem;
+        }
+        h1, h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--primary-color);
+        }
+        .hero {
+            background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(52, 73, 94, 0.8)), url('/api/placeholder/1200/400') no-repeat center center/cover;
+            color: #fff;
+            text-align: center;
+            padding: 8rem 0;
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: #fff;
+            letter-spacing: -0.5px;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            font-weight: 400;
+        }
+        .objectives {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .objectives h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--secondary-color);
+        }
+        .objective {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background-color: #f8f9fa;
+            border-radius: 6px;
+            border-left: 4px solid var(--accent-color);
+        }
+        .objective h3 {
+            color: var(--secondary-color);
+            margin-top: 0;
+        }
+        .research-areas {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .research-area {
+            flex-basis: calc(33.333% - 1.5rem);
+            background: #fff;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .research-area:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        .research-area h3 {
+            color: var(--secondary-color);
+            margin-top: 0;
+        }
+        footer {
+            background: var(--primary-color);
+            color: #fff;
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <h1 style="font-size: 1.5rem; margin: 0;">HeI Collaboration</h1>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#objectives">Objectives</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <h1>High energy intelligence Collaboration</h1>
+                <p>Advancing the frontiers of theoretical physics through innovative methods and collaborative research</p>
+            </div>
+        </section>
+
+        <section id="objectives" class="container objectives">
+            <h2>Our Objectives</h2>
+            <div class="objective">
+                <h3>Extending Bootstrap Methods</h3>
+                <p>Extend the horizon of applicability of bootstrap methods by finding better constraints and more rigorous predictions. This includes studying the conformal window of QCD-like theories, integrable and supersymmetric theories, and theories with gravitational duals within string theory.</p>
+            </div>
+            <div class="objective">
+                <h3>Refining QCD Physics Understanding</h3>
+                <p>Push the boundaries of our understanding of QCD physics by obtaining the most refined partonic distribution functions of quarks and gluons in nuclear matter.</p>
+            </div>
+            <div class="objective">
+                <h3>Combining AI/ML with Theoretical Physics</h3>
+                <p>Combine Artificial Intelligence and Machine Learning training with cutting-edge research in theoretical physics. We aim to design neural networks that can be trained on partial data sets while solving non-perturbative constraint equations from theory.</p>
+            </div>
+        </section>
+
+        <section id="research" class="container">
+            <h2>Research Areas</h2>
+            <div class="research-areas">
+                <div class="research-area">
+                    <h3>Bootstrap Methods</h3>
+                    <p>Exploring conformal and amplitude bootstrap techniques to solve strongly coupled emergent phenomena.</p>
+                </div>
+                <div class="research-area">
+                    <h3>QCD Physics</h3>
+                    <p>Studying partonic distribution functions and the conformal window of QCD-like theories.</p>
+                </div>
+                <div class="research-area">
+                    <h3>AI in Physics</h3>
+                    <p>Developing novel approaches to combine machine learning with theoretical physics constraints.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 High energy intelligence Collaboration. All rights reserved.</p>
+    </footer>
+</body>
 </html>
