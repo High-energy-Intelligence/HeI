@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+<!-- saved from url=(0047)https://high-energy-intelligence.github.io/HeI/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>High energy Intelligence (HeI)</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link href="./High energy Intelligence (HeI)_files/css2" rel="stylesheet">
     <style>
         :root {
             --primary-color: #2c3e50;
@@ -172,6 +173,87 @@
             padding: 1.5rem 0;
             margin-top: 2rem;
         }
+        #team {
+            background-color: #f7f9fc;
+            padding: 50px 0;
+        }
+        .team-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        .team-member {
+            flex-basis: calc(20% - 30px);
+            min-width: 200px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        .team-member:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+        .team-member-image {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+        }
+        .team-member-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.3s ease;
+        }
+        .team-member:hover .team-member-image img {
+            transform: scale(1.05);
+        }
+        .team-member-info {
+            padding: 20px;
+            text-align: center;
+        }
+        .team-member h3 {
+            margin: 0 0 10px;
+            color: #2c3e50;
+            font-size: 1.2em;
+        }
+        .team-member p {
+            margin: 0;
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+        .team-member-country {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .team-member-link {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 8px 15px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .team-member-link:hover {
+            background-color: #2980b9;
+        }
+        /* Refined country-specific colors */
+        .country-portugal { border-left: 4px solid #16a085; }
+        .country-spain { border-left: 4px solid #e74c3c; }
+        .country-italy { border-left: 4px solid #2ecc71; }
+        .country-france { border-left: 4px solid #3498db; }
+        .country-netherlands { border-left: 4px solid #f39c12; }
     </style>
 </head>
 <body>
@@ -179,50 +261,39 @@
         <nav class="container">
             <h1 style="font-size: 1.5rem; margin: 0;">HeI Collaboration</h1>
             <ul>
-                <li><a href="#objectives">Overview</a></li>
-                <li><a href="#research">Projects</a></li>
-                <li><a href="#research">Members</a></li>
+                <li><a href="https://high-energy-intelligence.github.io/HeI/#objectives">Overview</a></li>
+                <li><a href="https://high-energy-intelligence.github.io/HeI/#research">Projects</a></li>
                 <li class="dropdown">
-                    <a href="javascript:void(0)" class="dropbtn">Members</a>
+                    <a href="https://high-energy-intelligence.github.io/HeI/#team" class="dropbtn">Members</a>
                     <div class="dropdown-content">
                         <div class="nested-dropdown">
-                            <a href="#team-portugal">Portugal</a>
-                            <div class="nested-dropdown-content">
-                                <a href="#portugal-universities">Universities</a>
-                                <a href="#portugal-researchers">Researchers</a>
-                            </div>
+                            <a href="https://high-energy-intelligence.github.io/HeI/#team-portugal">Portugal</a>
                         </div>
                         <div class="nested-dropdown">
-                            <a href="#team-spain">Spain</a>
-                            <div class="nested-dropdown-content">
-                                <a href="#spain-universities">Universities</a>
-                                <a href="#spain-researchers">Researchers</a>
-                            </div>
+                            <a href="https://high-energy-intelligence.github.io/HeI/#team-spain">Spain</a>
                         </div>
                         <div class="nested-dropdown">
-                            <a href="#team-italy">Italy</a>
-                            <div class="nested-dropdown-content">
-                                <a href="#italy-universities">Universities</a>
-                                <a href="#italy-researchers">Researchers</a>
-                            </div>
+                            <a href="https://high-energy-intelligence.github.io/HeI/#team-italy">Italy</a>
                         </div>
                         <div class="nested-dropdown">
-                            <a href="#team-france">France</a>
-                            <div class="nested-dropdown-content">
-                                <a href="#france-universities">Universities</a>
-                                <a href="#france-researchers">Researchers</a>
-                            </div>
+                            <a href="https://high-energy-intelligence.github.io/HeI/#team-france">France</a>
                         </div>
                         <div class="nested-dropdown">
-                            <a href="#team-netherlands">Netherlands</a>
-                            <div class="nested-dropdown-content">
-                                <a href="#netherlands-universities">Universities</a>
-                                <a href="#netherlands-researchers">Researchers</a>
-                            </div>
+                            <a href="https://high-energy-intelligence.github.io/HeI/#team-netherlands">Netherlands</a>
                         </div>
                     </div>
                 </li>
-                <li><a href="#research">Activities</a></li>
+                <li class="dropdown">
+                    <a href="https://high-energy-intelligence.github.io/HeI/#research" class="dropbtn">Activities</a>
+                    <div class="dropdown-content">
+                        <div class="nested-dropdown">
+                            <a href="https://high-energy-intelligence.github.io/HeI/#team-portugal">Events</a>
+                        </div>
+                        <div class="nested-dropdown">
+                            <a href="https://high-energy-intelligence.github.io/HeI/#team-spain">Seminars</a>
+                        </div>
+                    </div>
+                </li>
             </ul>
         </nav>
     </header>
@@ -268,10 +339,79 @@
                 </div>
             </div>
         </section>
+
+        <section id="team" class="section">
+            <div class="container">
+                <h2>Our Team</h2>
+                <div class="team-container">
+                    <div class="team-member country-portugal">
+                        <div class="team-member-image">
+                            <img src="man icon.jpg" alt="Portugal Representative">
+                            <span class="team-member-country">Portugal</span>
+                        </div>
+                        <div class="team-member-info">
+                            <h3>Name of Portugal Representative</h3>
+                            <p>Role/Specialization</p>
+                            <a href="team-member.html?id=portugal" class="team-member-link">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="team-member country-spain">
+                        <div class="team-member-image">
+                            <img src="man icon.jpg" alt="Spain Representative">
+                            <span class="team-member-country">Spain</span>
+                        </div>
+                        <div class="team-member-info">
+                            <h3>Name of Spain Representative</h3>
+                            <p>Role/Specialization</p>
+                            <a href="team-member.html?id=spain" class="team-member-link">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="team-member country-italy">
+                        <div class="team-member-image">
+                            <img src="man icon.jpg" alt="Italy Representative">
+                            <span class="team-member-country">Italy</span>
+                        </div>
+                        <div class="team-member-info">
+                            <h3>Name of Italy Representative</h3>
+                            <p>Role/Specialization</p>
+                            <a href="team-member.html?id=italy" class="team-member-link">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="team-member country-france">
+                        <div class="team-member-image">
+                            <img src="man icon.jpg" alt="France Representative">
+                            <span class="team-member-country">France</span>
+                        </div>
+                        <div class="team-member-info">
+                            <h3>Name of France Representative</h3>
+                            <p>Role/Specialization</p>
+                            <a href="team-member.html?id=france" class="team-member-link">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="team-member country-netherlands">
+                        <div class="team-member-image">
+                            <img src="man icon.jpg" alt="Netherlands Representative">
+                            <span class="team-member-country">Netherlands</span>
+                        </div>
+                        <div class="team-member-info">
+                            <h3>Name of Netherlands Representative</h3>
+                            <p>Role/Specialization</p>
+                            <a href="team-member.html" class="team-member-link">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="objectives"> 
+            <p>This scientific collaboration is Marie Curie funded. <span style="font-size: 20pt;">new size text</span> For more information, visit <a href="https://cordis.europa.eu/project/id/101182937" target="_blank">CORDIS</a>.</p>
+        </div>
     </main>
 
     <footer>
-        <p>&copy; 2024 High energy intelligence Collaboration. All rights reserved.</p>
+        <p>© 2024 High energy intelligence Collaboration. All rights reserved.</p>
     </footer>
+
+
 </body>
 </html>
