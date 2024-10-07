@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Member Details - HeI Collaboration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background-color: #f4f4f4;
+            padding: 1rem 0;
+        }
+        header h1 {
+            margin: 0;
+        }
+        .member-details {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 30px;
+        }
+        .member-image {
+            flex: 1;
+            min-width: 300px;
+        }
+        .member-image img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .member-info {
+            flex: 2;
+            min-width: 300px;
+        }
+        .member-info h2 {
+            color: #007bff;
+            margin-top: 0;
+        }
+        .member-info p {
+            margin-bottom: 15px;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .back-link:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>HeI Collaboration Team Member</h1>
+        </div>
+    </header>
+
+    <main class="container">
+        <div id="member-details" class="member-details">
+            <!-- Member details will be dynamically inserted here -->
+        </div>
+        <a href="index.html" class="back-link">Back to Team</a>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const memberId = new URLSearchParams(window.location.search).get('id');
+            const memberDetails = document.getElementById('member-details');
+
+            // This would typically come from a server or database
+            const memberData = {
+                portugal: {
+                    name: "Name of Portugal Representative",
+                    role: "Role/Specialization",
+                    bio: "Detailed biography of the Portugal representative...",
+                    research: "Current research interests and projects...",
+                    publications: "List of recent publications..."
+                },
+                spain: {
+                    name: "Name of Spain Representative",
+                    role: "Role/Specialization",
+                    bio: "Detailed biography of the Spain representative...",
+                    research: "Current research interests and projects...",
+                    publications: "List of recent publications..."
+                },
+                italy: {
+                    name: "Name of Italy Representative",
+                    role: "Role/Specialization",
+                    bio: "Detailed biography of the Italy representative...",
+                    research: "Current research interests and projects...",
+                    publications: "List of recent publications..."
+                },
+                france: {
+                    name: "Name of France Representative",
+                    role: "Role/Specialization",
+                    bio: "Detailed biography of the France representative...",
+                    research: "Current research interests and projects...",
+                    publications: "List of recent publications..."
+                },
+                netherlands: {
+                    name: "Name of Netherlands Representative",
+                    role: "Role/Specialization",
+                    bio: "Detailed biography of the Netherlands representative...",
+                    research: "Current research interests and projects...",
+                    publications: "List of recent publications..."
+                }
+            };
+
+            if (memberId && memberData[memberId]) {
+                const member = memberData[memberId];
+                memberDetails.innerHTML = `
+                    <div class="member-image">
+                        <img src="/api/placeholder/600/480" alt="${member.name}">
+                    </div>
+                    <div class="member-info">
+                        <h2>${member.name}</h2>
+                        <p><strong>Role:</strong> ${member.role}</p>
+                        <p><strong>Biography:</strong> ${member.bio}</p>
+                        <p><strong>Research Interests:</strong> ${member.research}</p>
+                        <p><strong>Recent Publications:</strong> ${member.publications}</p>
+                    </div>
+                `;
+            } else {
+                memberDetails.innerHTML = '<p>Member not found.</p>';
+            }
+        });
+    </script>
+</body>
+</html>
