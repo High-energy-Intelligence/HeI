@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events page </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background-color: #f4f4f4;
+            padding: 1rem 0;
+        }
+        header h1 {
+            margin: 0;
+        }
+        .member-details {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 30px;
+        }
+        .member-image {
+            flex: 1;
+            min-width: 300px;
+        }
+        .member-image img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .member-info {
+            flex: 2;
+            min-width: 300px;
+        }
+        .member-info h2 {
+            color: #007bff;
+            margin-top: 0;
+        }
+        .member-info p {
+            margin-bottom: 15px;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .back-link:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>HeI Collaboration Events page</h1>
+        </div>
+    </header>
+
+    <main class="container">
+        <div id="member-details" class="member-details">
+            <!-- Member details will be dynamically inserted here -->
+        </div>
+        <a href="index.html" class="back-link">Back to main page</a>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const memberId = new URLSearchParams(window.location.search).get('id');
+            const memberDetails = document.getElementById('member-details');
+
+            // This would typically come from a server or database
+            const memberData = {
+                kickoff: {
+                    name: "Kick-Off Meeting",
+                    descri: "The goal of the kick-off meeting is to start the collaboration, show its objectives and introduce its members. ",
+                    speaker: "<br> EPFL group presentation I - Computational quantum physics - speaker: Giuseppe Carleo <br> EPFL group presentation II Fields, gravity and strings - speaker: Joao Penedones <br>  Porto group presentation - Fields, gravity and strings -  speaker: Vasco Goncalves <br> Torino group presentation -  Fields, gravity and strings - speaker Andrea Cavaglia <br> Madrid group presentation - Fields, gravity and strings - speaker:  Francesco  Aprile <br> Paris group presentation - Fields, gravity and strings - speaker:  Yifei  He <br> Research talk I - speaker: Michelangelo Preti -  Title: BFKL from integrability <br> Research talk I - speaker: Damien Leflot -  Title: S-matrix and Machine Learning <br> Research talk III - V.M.Braun Title: Conformal symmetry in strong interactions. <br> Madrid  Group presentation - EFT for collider physics - speaker:  TBA <br> Nikhef  Group presentation - EFT for collider physics - speaker:  Wouter Waalewijn <br>   " 
+                }
+            };
+
+            if (memberId && memberData[memberId]) {
+                const member = memberData[memberId];
+                memberDetails.innerHTML = `
+                    <div class="member-image">
+                        <img src="${member.name}.jpg" alt="${member.name}">
+                    </div>
+                    <div class="member-info">
+                        <h2>${member.name}</h2>
+                        <p><strong>Short description of event:</strong> ${member.descri}</p>
+                        <p><strong>Speakers:</strong> ${member.speaker}</p>
+                    </div>
+                `;
+            } else {
+                memberDetails.innerHTML = '<p>Member not found.</p>';
+            }
+        });
+    </script>
+</body>
+</html>
