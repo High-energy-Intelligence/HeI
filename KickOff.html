@@ -1,0 +1,366 @@
+
+<!DOCTYPE html>
+<!-- saved from url=(0047)https://high-energy-intelligence.github.io/HeI/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High energy Intelligence (HeI)</title>
+    <link href="./High energy Intelligence (HeI)_files/css2" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <style>
+        :root {
+            --primary-color: #9dbf9e;
+            --secondary-color: #6a6e5c;
+            --text-color: #333;
+            --bg-color: #ecf0f1;
+            --accent-color: #3498db;
+        }
+        body {
+            font-family: 'Rubik', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background: var(--bg-color);
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        header {
+            background: var(--primary-color);
+            color: #fff;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            margin-left: 1.5rem;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: var(--accent-color);
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a, .dropdown-content .nested-dropdown {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        .dropdown-content a:hover, .nested-dropdown:hover {
+            background-color: #f1f1f1;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .nested-dropdown-content {
+            display: none;
+            position: absolute;
+            left: 100%;
+            top: 0;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        }
+        .nested-dropdown:hover .nested-dropdown-content {
+            display: block;
+        }
+        main {
+            margin-top: 60px;
+            padding: 2rem 0;
+        }
+        section {
+            margin-bottom: 4rem;
+        }
+        h1, h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--primary-color);
+        }
+        .hero {
+            background: linear-gradient(#294e57,#225560), url('/api/placeholder/1200/400') no-repeat center center/cover;
+            color: #fff;
+            text-align: center;
+            padding: 8rem 0;
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: #fff;
+            letter-spacing: -0.5px;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            font-weight: 400;
+        }
+        .objectives {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .objectives h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--secondary-color);
+        }
+        .objective {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background-color: #f8f9fa;
+            border-radius: 6px;
+            border-left: 4px solid var(--accent-color);
+        }
+        .objective h3 {
+            color: var(--secondary-color);
+            margin-top: 0;
+        }
+        .research-areas {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .research-area {
+            flex-basis: calc(33.333% - 1.5rem);
+            background: #fff;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .research-area:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        .research-area h3 {
+            color: var(--secondary-color);
+            margin-top: 0;
+        }
+        footer {
+            background: var(--primary-color);
+            color: #fff;
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 2rem;
+        }
+        #team {
+            background-color: #f7f9fc;
+            padding: 50px 0;
+        }
+        .team-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        .team-member {
+            flex-basis: calc(20% - 30px);
+            min-width: 200px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        .team-member:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+        .team-member-image {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+        }
+        .team-member-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.3s ease;
+        }
+        .team-member:hover .team-member-image img {
+            transform: scale(1.05);
+        }
+        .team-member-info {
+            padding: 20px;
+            text-align: center;
+        }
+        .team-member h3 {
+            margin: 0 0 10px;
+            color: #2c3e50;
+            font-size: 1.2em;
+        }
+        .team-member p {
+            margin: 0;
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+        .team-member-country {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .team-member-link {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 8px 15px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .team-member-link:hover {
+            background-color: #2980b9;
+        }
+        /* Refined country-specific colors */
+        .country-portugal { border-left: 4px solid #16a085; }
+        .country-spain { border-left: 4px solid #e74c3c; }
+        .country-italy { border-left: 4px solid #2ecc71; }
+        .country-france { border-left: 4px solid #3498db; }
+        .country-netherlands { border-left: 4px solid #f39c12; }
+        
+        table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+}
+
+td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <h1 style="font-size: 1.5rem; margin: 0;">HeI Collaboration</h1>
+            <ul>
+                <li><a href="https://high-energy-intelligence.github.io/HeI/index.html">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+    <div class="container ">
+      <pre> </pre>
+  <p> <span style="font-size:30px ; font-family: Georgia, serif">Kick-Off Meeting </p>
+  
+  <table style="width:100%">
+  <tr>
+    <td></td>
+    <td>13 Jan </td>
+    <td>16 Jan</td>
+    <td>17 Jan</td>
+  </tr>
+  <tr>
+    <td style="width:10%"> Morning </td>
+    <td style="width:30%"> </td>
+    <td> </td>
+    <td> </td>
+  </tr>
+    <tr>
+    <td>  </td>
+    <td>   </td>
+    <td>Porto </td>
+    <td> </td>
+  </tr>
+      <tr>
+    <td >  </td>
+    <td>   </td>
+    <td> Torino</td>
+    <td> </td>
+  </tr>
+        <tr>
+   <td> </td>
+    <td>  </td>
+    <td> Madrid </td>
+    <td> </td>
+  </tr>
+        <tr>
+   <td> </td>
+    <td>  </td>
+    <td> Paris</td>
+    <td> </td>
+  </tr>
+        <tr>
+   <td>  Afternoon </td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+  </tr>
+          <tr>
+   <td>   </td>
+    <td> <a href="http://high-energy-intelligence.github.io/HeI/KickOff.html#carleo" EPFL - Giuseppe Carleo </td>
+    <td> </td>
+    <td> </td>
+  </tr>
+          <tr>
+   <td>   </td>
+    <td> EPFL - Joao Penedones </td>
+    <td> </td>
+    <td> </td>
+  </tr>
+    </table>
+  </div>
+  
+
+  <pre> </pre>
+  <div class="container">
+  <p style="line-height: 2" > <strong>Detailed Schedule</strong> <br>
+<span id="carleo" > Giuseppe Carleo </span> <span >  <a href=" ">video</a></span><br>
+<span id="penedones" >Joao Penedones  <span >  <a href="">video</a></span><br>
+<span id="goncalves" >Vasco Goncalves  <span >   <a href="">video</a></span><br>
+<span id="cavaglia" >Andrea Cavaglia    <span> <a href="">video</a></span><br>
+<span id="aprile" >Francesco Aprile  <span> <a href=" ">video</a></span><br>
+<span id="he" >Yifei He  <span> <a href=" ">video</a></span><br>
+<span id="he" >  <span> <a href=" ">video</a></span><br>
+</div>
+  
+    </main>
+
+
+
+    <footer>
+        <p>© 2024 High energy intelligence Collaboration. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
