@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)https://high-energy-intelligence.github.io/HeI/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High energy Intelligence (HeI)</title>
+    <link href="./High energy Intelligence (HeI)_files/css2" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <style>
+        :root {
+            --primary-color: #FAF0E6;
+            --secondary-color: #6a6e5c;
+            --text-color: #333;
+            --bg-color: #F0F8FF;
+            --accent-color: #3498db;
+        }
+        body {
+            font-family: 'Rubik', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background: var(--bg-color);
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        header {
+            background: var(--primary-color);
+            color: #fff;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0px;
+            z-index: 1000;
+            height: 30px;
+            
+        }
+        
+nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0;
+        }
+        
+ .nav__single-link {
+    padding: 18px;
+    margin: 10px;
+    font-family: 'Monaco', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+	}
+
+.nav__single-link:hover {
+    background-color: rgb(208, 208, 208);
+    border-radius: 12px;
+	}
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a, .dropdown-content .nested-dropdown {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        .dropdown-content a:hover, .nested-dropdown:hover {
+            background-color: #f1f1f1;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .nested-dropdown-content {
+            display: none;
+            position: absolute;
+            left: 100%;
+            top: 0;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        }
+        .nested-dropdown:hover .nested-dropdown-content {
+            display: block;
+        }
+        main {
+            margin-top: 60px;
+            padding: 2rem 0;
+        }
+        section {
+            margin-bottom: 4rem;
+        }
+        h1, h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--primary-color);
+        }
+        .hero {
+            background: linear-gradient(#294e57,#225560), url('/api/placeholder/1200/400') no-repeat center center/cover;
+            color: #fff;
+            text-align: center;
+            padding: 8rem 0;
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: #fff;
+            letter-spacing: -0.5px;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            font-weight: 400;
+        }
+        .objectives {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .objectives h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--secondary-color);
+        }
+        .objective {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background-color: #f8f9fa;
+            border-radius: 6px;
+            border-left: 4px solid var(--accent-color);
+        }
+        .objective h3 {
+            color: var(--secondary-color);
+            margin-top: 0;
+        }
+        .research-areas {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .research-area {
+            flex-basis: calc(33.333% - 1.5rem);
+            background: #fff;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .research-area:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        .research-area h3 {
+            color: var(--secondary-color);
+            margin-top: 0;
+        }
+        footer {
+            background: var(--primary-color);
+            color: #fff;
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 2rem;
+        }
+        #team {
+            background-color: #f7f9fc;
+            padding: 50px 0;
+        }
+        .team-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        .team-member {
+            flex-basis: calc(20% - 30px);
+            min-width: 200px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        .team-member:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+        .team-member-image {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+        }
+        .team-member-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.3s ease;
+        }
+        .team-member:hover .team-member-image img {
+            transform: scale(1.05);
+        }
+        .team-member-info {
+            padding: 20px;
+            text-align: center;
+        }
+        .team-member h3 {
+            margin: 0 0 10px;
+            color: #2c3e50;
+            font-size: 1.2em;
+        }
+        .team-member p {
+            margin: 0;
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+        .team-member-country {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .team-member-link {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 8px 15px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .team-member-link:hover {
+            background-color: #2980b9;
+        }
+        /* Refined country-specific colors */
+        .country-portugal { border-left: 4px solid #16a085; }
+        .country-spain { border-left: 4px solid #e74c3c; }
+        .country-italy { border-left: 4px solid #2ecc71; }
+        .country-france { border-left: 4px solid #3498db; }
+        .country-netherlands { border-left: 4px solid #f39c12; }
+        
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  margin-left: auto;
+    margin-right: auto;
+}
+
+td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav__links">
+            <a class="nav__single-link"  href="https://high-energy-intelligence.github.io/HeI/index.html" style="color:#CD5C5C;text-decoration: none">Curriculum Vitae</a>
+             <a class="nav__single-link"  href="https://high-energy-intelligence.github.io/HeI/index.html" style="color:#CD5C5C;text-decoration: none">The HeI project</a>
+             <a class="nav__single-link"  href="" style="color:#CD5C5C;text-decoration: none">Teaching</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+    
+    <div class="container "> 
+    
+<p> <strong>Personal Details:</strong> Francesco Aprile, born the 27 of October 1984 in Terracina, ITALY (EU citizenship)</p>
+I am a theoretical physicist, working in Quantum Field Theory, Conformal Field Theory, Bootstrap Methods, AdS/CFT, and String Theory. 
+<p><strong> Find my work online:</strong> ORCID: <a href="https://orcid.org/0000-0002-4826-3091"  style="color:#006400;">0000-0002-4826-3091</a>,  INSPIRE:  <a href="https://inspirehep.net/literature?sort=mostrecent&size=25&page=1&q=f%20a%20francesco%20aprile&ui-citation-summary=true" style="color:#006400;"> f a Francesco Aprile </a></p>
+<p><strong>Current Position:</strong> Tenure-Track Assistant Professor, Complutense University in Madrid. Department of Theoretical Physics.</p>
+<p><strong>Awarded Grants:</strong></p>
+<ul class="a">
+  <li>January 2025: High-energy Intelligence, European HORIZON-MSCA, <a href="https://cordis.europa.eu/project/id/101182937" style="color:#006400;">DOI 10.3030/101182937.</a> </li>
+  <li>January 2023: Ramon y Cajal Fellowship, Spanish Government, <a href="https://www.aei.gob.es/sites/default/files/convocatory_info/assistants/2025-10/RESOLUCION_RESERVA_A_SELECCIONADOS_RYC_2021_firmado.pdf" style="color:#006400;">RYC2021-031627-I.</a> </li>
+</ul>
+<p><strong>Post-Doc Positions:</strong></p>
+<ul class="a">
+<li>from July 2021 to December 2022: Postdoc at the SAIFR and IFT group, University of Sao Paulo, Brazil.</li>
+<li>from October 2017 to March 2021: Postdoc at University of Milano Bicocca, Italy. </li>
+<li>from October 2015 to September 2017: Postdoc at the STAG group, School of Physics and Astronomy, University of Southampton, UK.</li>
+<li>from September 2013 to September 2015: Postdoc at the Crete Center for Theoretical Physics, University of Crete, Greece.</li>
+</ul>
+<p><strong>Education:</strong></p>
+<ul class="a">
+<li>2013, PhD, University of Barcelona, Spain </li>
+<li>2008, Master in Theoretical Physics, University of Pisa, Italy. </li>
+<li>2006, Bachelor in Physical Sciences, University of Pisa, Italy. </li>
+</ul>
+<pre></pre>
+
+<p><strong>CV summary:</strong></p>
+During my PhD - funded by the Spanish FPU fellowship - I acquired broad expertise on Quantum Field
+Theories, General Relativity, Supersymmetry, Supergravity, String Theory, and the AdS/CFT
+correspondence. 
+In 2008-2009, Holographic superconductivity was proposed as a computational playground to
+understand analog properties of real-life High-Tc superconductors. The idea was to explore the properties of strongly interacting
+charged matter 
+by considering holographic systems within the same universality class. There were many
+generalizations of this idea in Condensed Matter Theory and this line of research received the
+acronym “AdS/CMT”. My PhD thesis, “Applied Gauge/Gravity Duality, from Supergravity to Superconductivity”,  
+and my publications from 2009 to 2014 focussed on this subject.  Some of my work at that time became relatively popular: In [1003.4487] I 
+was the first to provide analytic formulae for critical exponents at the onset of holographic superconductivity. In [1104.4473] I was the
+first to study AdS/CMT models in the phase diagram N=4 SYM by using gauged supergravity. In
+[1011.2172] I was the first to describe p-wave holographic superconductors. In [1410.7773], I was the
+first to understand the phenomenon of entanglement fragmentation in holographic theories.
+
+<pre></pre>
+During the 2016-2017, Rastelli and Zhou proposed a novel bootstrap approach to systematically
+compute tree-level correlators of strongly coupled theories with gravity duals. This was the time of my
+second post-doc at the University of Southampton. The case of N=4 SYM, which is also a
+Conformal Field Theory (CFT) was particularly appealing because of its relevance to Quantum
+Gravity (QG) in AdS. During 2017-2019, and in collaboration with James Drummund and Paul Heslop, 
+we put out a series of  seminal papers, which started with [1706.02822] and [1706.08456], 
+where we computed for the first time the full one-loop four-point
+correlation function of the graviton multiplet in type IIB supergravity compactified on the five-sphere, from the CFT. 
+This computation cannot be done with traditional techniques, and it is only possible by combining the following observations:
+<ul class="a">
+<li> Holographic correlators can be computed by using the Operator Product Expansion (OPE) and the
+amplitude bootstrap approach.</li>
+<li> Holographic gravity can be unmixed at leading order. </li>
+</ul>
+My investigations on QG in AdS continued in  [1711.03903],  [1802.06889] and  [1912.01047].
+The most complete version of the one-loop bootstrap program valid for all Kaluza-Klein
+four-point correlators in N=4 SYM at strong coupling was given in [1912.01047]. A further improvement
+on this came from [2007.09176] . The issue was that the flat space limit, developed by Joao
+Penedones, when considered at one-loop, was consistent with the CFT results but it was not manifest. 
+To solve this problem, in [2007.09176] I computed the Mellin amplitudes for one-loop correlators, and introduced a
+formalism to make manifest the Kaluza-Klein level of the sphere compactification. This formalism is nowadays called AdSxS Mellin space. 
+Then, I showed that the AdSxS Mellin amplitude of Kaluza-Klein correlators admits a generalized flat space limit in which
+both AdS and S combine together to reconstruct the higher dimensional flat space of string theory.
+Soon after my results in [2007.09176], it was possible to use the same method to start exploring
+curvature corrections to two-derivative gravity, and other beautiful results. 
+
+<pre></pre>
+Since 2020 I have been actively working on the analytic bootstrap for correlation functions, 
+and its applications to the study of quantum gravity in AdS/CFT and string theory. Based on this line of research, in 2022-2023 I was
+awarded with a Ramon y Cajal fellowship, and from 2025 I am project manager in Madrid of the staff-exchange 
+program “High-energy Intelligence” which was awarded by the European Union, Marie
+Skłodowska-Curie Actions.
+
+<p><strong>Invited speaker:</strong></p>
+
+<ul class="a">
+<li> IGAP Trieste, SISSA, Italy, 2025. Title: “ Dynamics of Heavy Operators”. <a href="https://www.youtube.com/watch?v=cg8DUGfz9Go&t=2788s">Recorded video.</a>
+<li> Trinity College Dublin, Ireland, 2024. Title: “ The geometry of correlation functions with huge operators”.
+Info available at <a href="https://sites.google.com/view/cftworkshop2024">CFT and Holography: Heavy and Thermal States and Black Holes.</a> </li>
+<li> KITP Santa Barbara, California, 2023. Title: “Gravity from algebra: modern field theory methods for
+holography”. <a href="https://online.kitp.ucsb.edu/online/bootstrap-c23/aprile/">Recorded video.</a></li>
+<li> Perimeter Institute, Canada, 2022. Title: “Conformal blocks in diverse dimensions and the superconformal
+cauchy identity”. <a href="https://pirsa.org/22040104">Recorded video.</a></li>
+<li> Shing-Tung Yau Centre of Southeast University, China, 2021. Title: “Single Particle Operators and their
+Correlators in Free N=4 SYM”. <a href="https://www.youtube.com/watch?v=_JH_LjSPyXQ&t=1888s&themeRefresh=1">Recorded video.</a></li>
+<li> DESY, Hamburg, Germany, 2019. Title: “The Grand Slam of IIB Supergravity: 4-point @ 1-Loop”. Info
+available at <a href="https://indico.desy.de/event/22536/contributions/">Quantum field theory meets gravity.</a></li>
+<li> Perimeter Institute, Canada, 2019. Title: “N=4 SYM and IIB Supergravity at 1-Loop”. <a href="https://pirsa.org/19020085">Recorded video.</a></li>
+<li> Barcelona University, Spain, 2019. Title “Quantum Gravity from CFT”. Info available at <a href="https://indico.icc.ub.edu/event/10/contributions/">Iberian Strings.</a></li>
+<li> Oxford University, UK, 2016. Title: “Geometry and Entanglement in Type IIB Holography”. Info available
+at Rudolph Peierls Centre - <a href="https://www-thphys.physics.ox.ac.uk/people/AndreiStarinets/oxford_holography_group/holography_seminar/Seminar/Past/mt15.html">Seminars.</a></li>
+<li> Weizmann Institute, Israel, 2015. Title: “Geometry and Entanglement in Type IIB Supergravity”. Info
+available at Neve-Shalom Meetings.</li>
+<li> Crete University, Greece, 2014. Title “A simple holographic model of a charged lattice”. Info available at
+<a href="https://hep.physics.uoc.gr/regpot2014/">Quantum Field Theory, String Theory and Condensed Matter Physics @ Kolymbari.</a></li>
+  
+  </div>
+   </main>
+
+
+
+    <footer>
+        <p>© 2025 High energy intelligence Collaboration. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
